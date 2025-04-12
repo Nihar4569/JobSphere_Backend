@@ -12,12 +12,12 @@ import java.math.BigInteger;
 @NoArgsConstructor
 @Setter
 @Getter
-@Document(collection = "jobseekers")
+@Document(collection = "Jobseekers")
 
-public class jobseeker {
+public class Jobseeker {
 
     @Id
-    private int jobseekerid;
+    private int jobid;
 
     @NotBlank
     private String name;

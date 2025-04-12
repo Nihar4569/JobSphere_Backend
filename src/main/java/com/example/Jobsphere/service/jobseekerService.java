@@ -1,6 +1,6 @@
 package com.example.Jobsphere.service;
 
-import com.example.Jobsphere.model.jobseeker;
+import com.example.Jobsphere.model.Jobseeker;
 import com.example.Jobsphere.repo.jobseekerRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,11 +12,11 @@ public class jobseekerService {
     @Autowired
     jobseekerRepo jobseekerRepo;
 
-    public jobseeker addjobseeker(jobseeker jobid){return jobseekerRepo.save(jobid);}
-    public List<jobseeker> alljobseeker(){return jobseekerRepo.findAll();}
-    public jobseeker  jobseekerByJobid(int id){return jobseekerRepo.findByJobseekerid(id);}
+    public Jobseeker addjobseeker(Jobseeker jobid){return jobseekerRepo.save(jobid);}
+    public List<Jobseeker> alljobseeker(){return jobseekerRepo.findAll();}
+    public Jobseeker jobseekerByJobid(int id){return jobseekerRepo.findByJobid(id);}
     public void delete_jobseeker(int id){
-        jobseeker j = jobseekerRepo.findByJobseekerid(id);
+        Jobseeker j = jobseekerRepo.findByJobid(id);
         if(j!=null){
             jobseekerRepo.delete(j);
         }
